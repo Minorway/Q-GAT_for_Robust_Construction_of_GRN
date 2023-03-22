@@ -4,33 +4,36 @@ This repository provides scripts to reproduce the results in the paper "Quadrati
 1. We propose Q-GAT for the task of GRNs, which is the pioneer in addressing the stability issue of constructing GRNs. Instead of a modification for network structures, our innovation is at the neuronal level from the perspective of neuronal diversity.
 2. Systematic experiments show that under different levels of adversarial noises, the proposed Q-GAT is superior to its competitors in terms of stability in constructing GRNs.
 3. Not just satisfied with the superior performance ofQ-GAT, we move one step further to analyze why Q-GAT is more robust aided by the SNR and interpretability analyses.
+
 ![Q-GAT](https://github.com/Minorway/Q-GAT_for_Robust_Construction_of_GRN/blob/main/Images/Q-GAT_structure.pdf)
 
 
 
-All experiments are conducted with Windows 10 on an Intel i9 10900k CPU at 3.70 GHz and one NVIDIA RTX 3080Ti 12GB GPU. We implement our model on Python 3.8 with the PyTorch package, an open-source deep learning framework.  
+We implement our model on Python 3.8 with the PyTorch package, an open-source deep learning framework.  
 
 ## Citing
 If you find this repo useful for your research, please consider citing it:
 ```
-@article{liao2022attention,
-  title={Attention-embedded Quadratic Network (Qttention) for Effective and Interpretable Bearing Fault Diagnosis},
-  author={Liao, Jing-Xiao and Dong, Hang-Cheng and Sun, Zhi-Qi and Sun, Jinwei and Zhang, Shiping and Fan, Feng-Lei},
-  journal={arXiv preprint arXiv:2206.00390},
-  year={2022}
-}
+
 ```
 
 
 
-## Quadratic Convolutional Neural Network (QCNN)
+## Quadratic Graph Attention Network (Q-GAT)
 
 ### Quadratic Neurons
-A quadratic neuron was proposed by [1], It computes two inner products  and  one  power  term  of  the  input  vector  and  integrates them for a nonlinear activation function. The output function of a quadratic neuron is expressed as 
+A quadratic neuron was proposed by [1], which integrates two inner products and one power term of the input vector before nonlinear activation.
 
-![enter description here](https://raw.githubusercontent.com/asdvfghg/image/master/小书匠/1641001696385.png),
+\begin{equation}
+\scalebox{0.95}{
+$
+\sigma(\Q(\boldsymbol{x}))
+=\sigma\Big((\W_1^\top \boldsymbol{x}+\boldsymbol{b}_1)(\W_2^\top\boldsymbol{x}+\boldsymbol{b}_2)+\W_3^\top(\boldsymbol{x}\odot\boldsymbol{x})+\boldsymbol{b}_3\Big),
+$}
+\label{Qlayerneq1}
+\end{equation}
 
-where $\sigma(\cdot)$ is a nonlinear activation function, $\odot$ denotes the Hadamard product, $\boldsymbol{w}^r,\boldsymbol{w}^g, \boldsymbol{w}^b\in\mathbb{R}^n$ are weight vectors, and $b^r, b^g, c\in\mathbb{R}$ are biases. When $\boldsymbol{w}^g=0$, $b^g=1$, and $\boldsymbol{w}^b=0$, a quadratic neuron degenerates to a conventional neuron:  $\sigma(f(\boldsymbol{x}))= \sigma(\boldsymbol{x}^\top\boldsymbol{w}^{r}+b^{r})$. 
+where $\W_1,\W_2, \W_3\in\mathbb{R}^{n_1\times n_2}$ are weight matrices, and $\boldsymbol{b}_1, \boldsymbol{b}_2, \boldsymbol{b}_3 \in\mathbb{R}^{n_1}$ are bias vectors.
 
 ### QCNN Structure
 We propose a quadratic neuron empowered 1DCNN for bearing fault diagnosis. Specifically, the QCNN substitutes the conventional convolution with the quadratic convolution operations in convolutional layers. Structurally, we inherit the structure of the WDCNN [2] as the structure of the proposed model because the WDCNN is a well-established model whose design has been considered by many follow-up studies. This structure stacks 6 CNN blocks and 1 fully-connected layer.
