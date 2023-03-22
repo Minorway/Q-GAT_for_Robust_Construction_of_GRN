@@ -24,14 +24,14 @@ If you find this repo useful for your research, please consider citing it:
 ### Quadratic Neurons
 A quadratic neuron was proposed by [1], which integrates two inner products and one power term of the input vector before nonlinear activation.
 
-\begin{equation}
+$\begin{equation}
 \scalebox{0.95}{
 $
 \sigma(\Q(\boldsymbol{x}))
 =\sigma\Big((\W_1^\top \boldsymbol{x}+\boldsymbol{b}_1)(\W_2^\top\boldsymbol{x}+\boldsymbol{b}_2)+\W_3^\top(\boldsymbol{x}\odot\boldsymbol{x})+\boldsymbol{b}_3\Big),
 $}
 \label{Qlayerneq1}
-\end{equation}
+\end{equation}$
 
 where $\W_1,\W_2, \W_3\in\mathbb{R}^{n_1\times n_2}$ are weight matrices, and $\boldsymbol{b}_1, \boldsymbol{b}_2, \boldsymbol{b}_3 \in\mathbb{R}^{n_1}$ are bias vectors.
 
