@@ -11,11 +11,6 @@ This repository provides scripts to reproduce the results in the paper "Quadrati
 
 We implement our model on Python 3.8 with the PyTorch package, an open-source deep learning framework.  
 
-## Citing
-If you find this repo useful for your research, please consider citing it:
-```
-
-```
 
 
 ## Repository organization
