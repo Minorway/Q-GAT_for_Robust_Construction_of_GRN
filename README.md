@@ -43,7 +43,7 @@ Q-GAT_for_Robust_Construction_of_GRN
 ```
 
 ### Datasets
-We use the public $\emph{E. coli}$ and $\emph{S. cerevisiae}$ datasets from the DREAM5 challenge in our article. 
+We use the public $E. coli$ and $S. cerevisiae$ datasets from the DREAM5 challenge in our article. 
 
 ## Contact
 If you have any questions about our work, please contact the following email address:
