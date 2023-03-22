@@ -38,7 +38,7 @@ Q-GAT_for_Robust_Construction_of_GRN
 ```
 
 ### Datasets
-We use the public $E. coli$ and $S. cerevisiae$ datasets from the DREAM5 challenge in our article. 
+We use the public $E. coli$ and $S. cerevisiae$ datasets from the DREAM5 challenge [1] in our article. 
 
 ## Contact
 If you have any questions about our work, please contact the following email address:
@@ -46,3 +46,9 @@ If you have any questions about our work, please contact the following email add
 21S012063@stu.hit.edu.cn
 
 Enjoy your coding!
+
+
+
+## Reference
+[1] Daniel Marbach, James C Costello, Robert K¨uffner, Nicole MVega, Robert J Prill, Diogo M Camacho, Kyle R Allison, Manolis Kellis, James J Collins, and Gustavo Stolovitzky. Wisdomof crowds for robust gene network inference. Nature Methods,9(8):796–804, 2012.
+
