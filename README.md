@@ -24,16 +24,10 @@ If you find this repo useful for your research, please consider citing it:
 ### Quadratic Neurons
 A quadratic neuron was proposed by [1], which integrates two inner products and one power term of the input vector before nonlinear activation.
 
-$\begin{equation}
-\scalebox{0.95}{
-$
-\sigma(\Q(\boldsymbol{x}))
-=\sigma\Big((\W_1^\top \boldsymbol{x}+\boldsymbol{b}_1)(\W_2^\top\boldsymbol{x}+\boldsymbol{b}_2)+\W_3^\top(\boldsymbol{x}\odot\boldsymbol{x})+\boldsymbol{b}_3\Big),
-$}
-\label{Qlayerneq1}
-\end{equation}$
+$\sigma(\Q(\boldsymbol{x}))
+=\sigma\Big((\W_1^\top \boldsymbol{x}+\boldsymbol{b}_1)(\W_2^\top\boldsymbol{x}+\boldsymbol{b}_2)+\W_3^\top(\boldsymbol{x}\odot\boldsymbol{x})+\boldsymbol{b}_3\Big)$
 
-where $\W_1,\W_2, \W_3\in\mathbb{R}^{n_1\times n_2}$ are weight matrices, and $\boldsymbol{b}_1, \boldsymbol{b}_2, \boldsymbol{b}_3 \in\mathbb{R}^{n_1}$ are bias vectors.
+where $\W_1,\W_2, \W_3\in\mathbb{R}^{{n}_1\times n_2}$ are weight matrices, and $\boldsymbol{b}_1, \boldsymbol{b}_2, \boldsymbol{b}_3 \in\mathbb{R}^{n_1}$ are bias vectors.
 
 ### QCNN Structure
 We propose a quadratic neuron empowered 1DCNN for bearing fault diagnosis. Specifically, the QCNN substitutes the conventional convolution with the quadratic convolution operations in convolutional layers. Structurally, we inherit the structure of the WDCNN [2] as the structure of the proposed model because the WDCNN is a well-established model whose design has been considered by many follow-up studies. This structure stacks 6 CNN blocks and 1 fully-connected layer.
