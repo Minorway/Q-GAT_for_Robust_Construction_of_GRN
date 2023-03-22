@@ -53,5 +53,5 @@ Enjoy your coding!
 
 
 ## Reference
-[1] Daniel Marbach, James C Costello, Robert K¨uffner, Nicole MVega, Robert J Prill, Diogo M Camacho, Kyle R Allison, Manolis Kellis, James J Collins, and Gustavo Stolovitzky. Wisdomof crowds for robust gene network inference. Nature Methods,9(8):796–804, 2012.
+[1] Daniel Marbach, James C Costello, Robert Kuffner, Nicole MVega, Robert J Prill, Diogo M Camacho, Kyle R Allison, Manolis Kellis, James J Collins, and Gustavo Stolovitzky. Wisdomof crowds for robust gene network inference. Nature Methods,9(8):796–804, 2012.
 
