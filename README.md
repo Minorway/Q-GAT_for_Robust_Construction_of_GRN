@@ -35,7 +35,7 @@ Q-GAT_for_Robust_Construction_of_GRN
 └─  SNR
      │   NNs_QNN_comparision.ipynb # NNs and QNN
      │   test # SNR data
-└─  agent model
+└─  agent_model
      │   data3_fea=4_Q_GAT0.pt # Pre traing model in $E. coli$ dataset
      │   data4_fea=4_Q_GAT0.pt # Pre traing model in $S. cerevisiae$ dataset
 ```
