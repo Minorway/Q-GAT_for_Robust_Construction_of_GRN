@@ -18,42 +18,17 @@ If you find this repo useful for your research, please consider citing it:
 ```
 
 
-
-## Quadratic Graph Attention Network (Q-GAT)
-
-### Quadratic Neurons
-A quadratic neuron was proposed by [1], which integrates two inner products and one power term of the input vector before nonlinear activation.
-
-$\sigma(\Q(\boldsymbol{x}))
-=\sigma\Big((\W_1^\top \boldsymbol{x}+\boldsymbol{b}_1)(\W_2^\top\boldsymbol{x}+\boldsymbol{b}_2)+\W_3^\top(\boldsymbol{x}\odot\boldsymbol{x})+\boldsymbol{b}_3\Big)$
-
-where $\W_1,\W_2, \W_3\in\mathbb{R}^{{n}_1\times n_2}$ are weight matrices, and $\boldsymbol{b}_1, \boldsymbol{b}_2, \boldsymbol{b}_3 \in\mathbb{R}^{n_1}$ are bias vectors.
-
-### QCNN Structure
-We propose a quadratic neuron empowered 1DCNN for bearing fault diagnosis. Specifically, the QCNN substitutes the conventional convolution with the quadratic convolution operations in convolutional layers. Structurally, we inherit the structure of the WDCNN [2] as the structure of the proposed model because the WDCNN is a well-established model whose design has been considered by many follow-up studies. This structure stacks 6 CNN blocks and 1 fully-connected layer.
-![enter description here](https://raw.githubusercontent.com/asdvfghg/image/master/QCNN/1666079629967.png)
-
-### Qttention
-We find that a quadratic neuron also contains an attention mechanism, referred to as *qttention*, by factorizing the learned quadratic function in analogue to attention. Mathematically, we factorize the expression of a quadratic neuron as follows (we remove constant terms for conciseness):
-
-![](https://raw.githubusercontent.com/asdvfghg/image/master/QCNN/qttention1.png)
-
-![](https://raw.githubusercontent.com/asdvfghg/image/master/QCNN/qttention2.png)
-
-![](https://raw.githubusercontent.com/asdvfghg/image/master/QCNN/qttention3.png)
-
-Such that, we can recover the qttention map of each layer through the above equations. The workflow of qttention map are shown as follows.
-![enter description here](https://raw.githubusercontent.com/asdvfghg/image/master/QCNN/qttention.png)
-
 ## Repository organization
 
 ### Requirements
-We use PyCharm 2021.2 to be a coding IDE, if you use the same, you can run this program directly. Other IDE we have not yet tested, maybe you need to change some settings.
-* Python == 3.8
-* PyTorch == 1.10.1
-* CUDA == 11.3 if use GPU
-* wandb == 0.12.11
-* anaconda == 2021.05
+We use Spyder 2021.2 to be a coding IDE, if you use the same, you can run this program directly. Other IDE we have not yet tested, maybe you need to change some settings.
+* torch                       1.8.0
+* torch-geometric             2.1.0
+* torch-scatter               2.0.6
+* torch-sparse                0.6.9
+* torchaudio                  0.8.0
+* torchvision                 0.9.0
+* tqdm                        4.64.1
  
 ### Organization
 ```
