@@ -6,7 +6,7 @@ This repository provides scripts to reproduce the results in the paper "Quadrati
 3. Not just satisfied with the superior performance ofQ-GAT, we move one step further to analyze why Q-GAT is more robust aided by the SNR and interpretability analyses.
 
 ![Q-GAT](https://github.com/Minorway/Q-GAT_for_Robust_Construction_of_GRN/blob/main/Images/Q-GAT_structure.png)
-
+<img src="https://github.com/Minorway/Q-GAT_for_Robust_Construction_of_GRN/blob/main/Images/Q-GAT_structure.png" width="800" />
 
 
 We implement our model on Python 3.8 with the PyTorch package, an open-source deep learning framework.  
