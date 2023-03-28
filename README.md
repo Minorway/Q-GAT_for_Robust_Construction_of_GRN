@@ -11,7 +11,16 @@ This repository provides scripts to reproduce the results in the paper "Quadrati
 
 We implement our model on Python 3.8 with the PyTorch package, an open-source deep learning framework.  
 
-
+## Citing
+If you find this repo useful for your research, please consider citing it:
+```
+@article{zhang2023quadratic,
+  title={Quadratic Graph Attention Network (Q-GAT) for Robust Construction of Gene Regulatory Networks},
+  author={Hui Zhang and Xuexin An and Qiang He and Yudong Yao and Feng-Lei Fan and Yueyang Teng},
+  journal={arXiv preprint arXiv:2303.14193},
+  year={2023}
+}
+```
 
 ## Repository organization
 
